@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public abstract class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button button;
     private EditText edit;
     private EditText edit2;
@@ -21,15 +21,22 @@ public abstract class MainActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-        
+
         button = findViewById(R.id.btn);
         edit = findViewById(R.id.user);
         edit2 = findViewById(R.id.pass);
         text = findViewById(R.id.text);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 text.setText(edit.getText());
+            }
+
+            @Override
+            public boolean onLongClick(View v) {
+                text.setText(edit2.getText());
+                return false;
             }
         });
     }
