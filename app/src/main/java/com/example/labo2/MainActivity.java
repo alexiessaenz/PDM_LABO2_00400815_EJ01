@@ -33,7 +33,20 @@ public class MainActivity extends AppCompatActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                text.setText(edit.getText());
                 Toast.makeText(getApplicationContext(),"clicked",Toast.LENGTH_LONG).show();
+            }
+
+
+        });
+
+        boton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                text.setText(edit2.getText());
+                Toast.makeText(getApplicationContext(),"LongClicked",Toast.LENGTH_LONG).show();
+
+                return false;
             }
         });
 

@@ -7,11 +7,9 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-
-
     <EditText
         android:id="@+id/user"
-        android:paddinTop="200dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
